@@ -2,22 +2,28 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>TiempoPerfecto | Inicio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>TiempoPerfecto | Relojes de Alta Gama</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- RUTA RELATIVA AL CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <meta
+    name="description"
+    content="TiempoPerfecto, especialistas en relojes de alta gama y colecciones exclusivas."
+  />
 </head>
 <body>
-  <!-- HEADER + NAV -->
+  <!-- HEADER usando las clases del CSS -->
   <header class="site-header">
     <div class="logo-box">
-      <img src="images/logo-tiempoperfecto.jpg" alt="Logo TiempoPerfecto" width="100" height="40" />
+      <img src="images/logo-tiempoperfecto.jpg" alt="Logotipo TiempoPerfecto" width="100" height="100" />
       <span class="brand-name">TiempoPerfecto</span>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Navegación principal">
       <ul>
         <li><a href="index.html" class="active">Inicio</a></li>
-        <li><a href="pages/galeria.html">Galería</a></li>
+        <!-- OJO: sin / delante, rutas relativas -->
+        <li><a href="pages/galeria.html">Productos</a></li>
         <li><a href="pages/presupuesto.html">Presupuesto</a></li>
         <li><a href="pages/contacto.html">Contacto</a></li>
       </ul>
@@ -25,86 +31,117 @@
   </header>
 
   <main>
-    <!-- Sección 1: Hero -->
-    <section id="hero" class="section hero">
+    <!-- HERO: usa .section y .hero, que sí existen en tu CSS -->
+    <section class="section hero" aria-labelledby="hero-title">
       <div class="hero-content">
-        <h1>Relojes que marcan tu historia</h1>
+        <h1 id="hero-title">Relojes que marcan la diferencia</h1>
         <p>
-          En TiempoPerfecto seleccionamos los mejores relojes para acompañarte
-          en cada momento importante de tu vida.
+          En TiempoPerfecto seleccionamos relojes de alta gama que combinan
+          precisión, elegancia y estilo atemporal. Descubre nuestras colecciones
+          exclusivas para cada momento de tu vida.
         </p>
-        <a href="pages/galeria.html" class="btn-primary">Ver colección</a>
+
+        <div class="hero-buttons">
+          <a href="pages/galeria.html" class="btn-primary">Ver colección</a>
+          <a href="pages/presupuesto.html" class="btn-secondary">Solicitar presupuesto</a>
+        </div>
       </div>
     </section>
 
-    <!-- Sección 2: Destacados -->
-    <section id="destacados" class="section">
-      <h2>Modelos destacados</h2>
-      <div class="card-grid">
-        <article class="card">
-          <img src="images/reloj1.jpg" alt="Reloj clásico" width="300" height="300" />
-          <h3>Clásico Elegante</h3>
-          <p>Ideal para el día a día con un diseño atemporal.</p>
-        </article>
-        <article class="card">
-          <img src="images/reloj2.jpg" alt="Reloj deportivo" width="300" height="300" />
-          <h3>Deportivo Pro</h3>
-          <p>Resistente al agua y preparado para cualquier reto.</p>
-        </article>
-        <article class="card">
-          <img src="images/reloj3.jpg" alt="Reloj smart" width="300" height="300" />
-          <h3>Smart Urbano</h3>
-          <p>Conecta tu estilo a tu ritmo de vida digital.</p>
-        </article>
-      </div>
-    </section>
+    <!-- SECCIÓN FILOSOFÍA -->
+    <section class="section section-alt" aria-labelledby="valores-title">
+      <h2 id="valores-title">Nuestra filosofía</h2>
+      <p>
+        Tres pilares que definen cada reloj que ofrecemos.
+      </p>
 
-    <!-- Sección 3: Ventajas -->
-    <section id="ventajas" class="section section-alt">
-      <h2>¿Por qué elegir TiempoPerfecto?</h2>
+      <!-- aquí usamos columns-3 y card, que sí están en el CSS -->
       <div class="columns-3">
-        <div>
-          <h3>Envío rápido</h3>
-          <p>Entrega en 24/48 horas en la mayoría de península.</p>
-        </div>
-        <div>
-          <h3>Garantía oficial</h3>
-          <p>Todos nuestros modelos incluyen garantía mínima de 2 años.</p>
-        </div>
-        <div>
-          <h3>Atención personalizada</h3>
-          <p>Te ayudamos a elegir el reloj que mejor encaja contigo.</p>
-        </div>
+        <article class="card">
+          <h3>Precisión</h3>
+          <p>
+            Cada pieza ha sido seleccionada por su fiabilidad y exactitud,
+            respetando los más altos estándares de la relojería.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Diseño</h3>
+          <p>
+            Líneas modernas y materiales de calidad para un estilo que se
+            mantiene vigente año tras año.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Servicio</h3>
+          <p>
+            Te acompañamos antes y después de la compra con asesoramiento
+            personalizado y mantenimiento especializado.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- Sección 4: Noticias desde JSON -->
-    <section id="noticias" class="section">
-      <h2>Noticias y novedades</h2>
-      <!-- Aquí se inyectan dinámicamente las noticias -->
-      <div id="news-container" class="news-container">
-        <p>Cargando noticias...</p>
+    <!-- COLECCIONES DESTACADAS -->
+    <section class="section" aria-labelledby="destacados-title">
+      <h2 id="destacados-title">Colecciones destacadas</h2>
+      <p>
+        Una selección rápida para empezar a descubrir nuestro catálogo.
+      </p>
+
+      <div class="columns-3">
+        <article class="card">
+          <h3>Clásicos</h3>
+          <p>
+            Relojes de inspiración tradicional con un toque actual, ideales
+            para el día a día en la oficina.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Deportivos</h3>
+          <p>
+            Modelos resistentes con funciones avanzadas pensados para
+            acompañarte en cualquier reto.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Ediciones limitadas</h3>
+          <p>
+            Piezas exclusivas para coleccionistas que buscan algo realmente
+            único.
+          </p>
+        </article>
       </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section section-alt" aria-labelledby="cta-title">
+      <h2 id="cta-title">¿Necesitas asesoramiento?</h2>
+      <p>
+        Cuéntanos qué tipo de reloj estás buscando y te ayudaremos a elegir el
+        modelo perfecto según tu estilo y presupuesto.
+      </p>
+      <a href="pages/presupuesto.html" class="btn-primary">Pedir presupuesto</a>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER usando .site-footer y .footer-right -->
   <footer class="site-footer">
-    <div class="footer-left">
+    <div>
       <p>&copy; 2025 TiempoPerfecto. Todos los derechos reservados.</p>
       <a href="#">Política de Cookies</a> | 
       <a href="#">Aviso legal</a>
-      
     </div>
     <div class="footer-right">
-      <p>Síguenos</p>
-      <!-- Sustituye por imágenes reales en /images -->
-      <a href="#"><img src="images/icon-facebook.jpg" alt="Facebook" width="24" height="22" /></a>
-      <a href="#"><img src="images/icon-instagram.jpg" alt="Instagram" width="24" height="22" /></a>
-      <a href="#"><img src="images/icon-twitter.jpg" alt="Twitter" width="24" height="22" /></a>
+      <a href="https://www.facebook.com" target="_blank" rel="noopener">
+        <img src="images/icon-facebook.jpg" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener">
+        <img src="images/icon-instagram.jpg" alt="Instagram" />
+      </a>
+      <a href="https://www.twitter.com" target="_blank" rel="noopener">
+        <img src="images/icon-twitter.jpg" alt="Twitter" />
+      </a>
     </div>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 </html>

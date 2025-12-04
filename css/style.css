@@ -94,11 +94,14 @@ body {
 
 .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60vh;
-  text-align: center;
+  align-items: flex-start;  
+  justify-content: center;   
+  padding: 3rem 2rem 3rem;
+  min-height: auto;          
 }
+
+
+
 
 .hero-content {
   max-width: 600px;
