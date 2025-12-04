@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TiempoPerfecto | Galería</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-box">
+      <img src="../images/logo-tiempoperfecto.jpg" alt="Logo TiempoPerfecto" width="100" height="40"  />
+      <span class="brand-name">TiempoPerfecto</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html" class="active">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Galería de relojes</h1>
+    <p>Haz clic en cualquier miniatura para verla en grande.</p>
+
+    <!-- Imagen principal -->
+    <div class="gallery-main">
+      <img id="gallery-main-image" src="../images/reloj1.jpg" alt="Reloj seleccionado" />
+      <h2 id="gallery-main-title">Clásico Elegante</h2>
+    </div>
+
+    <!-- Miniaturas generadas con JS -->
+    <div id="gallery-thumbs" class="gallery-thumbs">
+      <!-- Las miniaturas se crean en main.js -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+     <p>&copy; 2025 TiempoPerfecto. Todos los derechos reservados.</p>
+      <a href="#">Política de Cookies</a> | 
+      <a href="#">Aviso legal</a>
+    </div>
+    <div class="footer-right">
+      <p>Síguenos</p>
+      <a href="#"><img src="../images/icon-facebook.jpg" alt="Facebook" width="24" height="22" /></a>
+      <a href="#"><img src="../images/icon-instagram.jpg" alt="Instagram" width="24" height="22" /></a>
+      <a href="#"><img src="../images/icon-twitter.jpg" alt="Twitter" width="24" height="22" /></a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

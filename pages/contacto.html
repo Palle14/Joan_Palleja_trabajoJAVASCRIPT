@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TiempoPerfecto | Contacto</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <!-- Leaflet Routing Machine CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-box">
+      <img src="/images/logo-tiempoperfecto.jpg" alt="Logo TiempoPerfecto" width="100" height="40" />
+      <span class="brand-name">TiempoPerfecto</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html">Presupuesto</a></li>
+        <li><a href="contacto.html" class="active">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Contacto</h1>
+
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h2>Nuestra tienda</h2>
+        <p><strong>TiempoPerfecto</strong></p>
+        <p>C/ Relojeros 123, 08000 Barcelona</p>
+        <p>Teléfono: 600 123 456</p>
+        <p>Email: info@tiempoperfecto.es</p>
+
+        <p>
+          Estamos en el centro de Barcelona. Usa el mapa para calcular la ruta
+          desde tu ubicación hasta nuestra tienda.
+        </p>
+      </div>
+
+      <div class="contact-map">
+        <div id="map" style="height: 400px;"></div>
+        <p class="help-text">
+          Si el navegador lo permite, detectaremos tu ubicación para mostrar la ruta.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <p>&copy; 2025 TiempoPerfecto. Todos los derechos reservados.</p>
+      <a href="#">Política de Cookies</a> | 
+      <a href="#">Aviso legal</a>
+    </div>
+    <div class="footer-right">
+      <p>Síguenos</p>
+      <a href="#"><img src="../images/icon-facebook.jpg" alt="Facebook" width="24" height="22"/></a>
+      <a href="#"><img src="../images/icon-instagram.jpg" alt="Instagram" width="24" height="22"/></a>
+      <a href="#"><img src="../images/icon-twitter.jpg" alt="Twitter" width="24" height="22" /></a>
+    </div>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <!-- Leaflet Routing Machine JS -->
+  <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

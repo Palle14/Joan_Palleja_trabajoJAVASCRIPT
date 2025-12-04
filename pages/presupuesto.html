@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>TiempoPerfecto | Presupuesto</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-box">
+      <img src="../images/logo-tiempoperfecto.jpg" alt="Logo TiempoPerfecto" width="100" height="40" />
+      <span class="brand-name">TiempoPerfecto</span>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <h1>Formulario de solicitud de presupuesto</h1>
+
+    <form id="budget-form" novalidate>
+      <!-- DATOS DE CONTACTO -->
+      <fieldset>
+        <legend>Datos de contacto</legend>
+
+        <div class="form-row">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" maxlength="15"
+                 placeholder="Escribe tu nombre" required />
+          <small class="error-msg" id="error-nombre"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="apellidos">Apellidos</label>
+          <input id="apellidos" name="apellidos" type="text" maxlength="40"
+                 placeholder="Escribe tus apellidos" required />
+          <small class="error-msg" id="error-apellidos"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="telefono">Teléfono de contacto</label>
+          <input id="telefono" name="telefono" type="tel" maxlength="9"
+                 placeholder="Sólo números" required />
+          <small class="error-msg" id="error-telefono"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="email" type="email"
+                 placeholder="nombre_apellido@dominio.com" required />
+          <small class="error-msg" id="error-email"></small>
+        </div>
+      </fieldset>
+
+      <!-- PRESUPUESTO -->
+      <fieldset>
+        <legend>Presupuesto</legend>
+
+        <!-- Producto -->
+        <div class="form-row">
+          <label for="producto">Elige un producto</label>
+          <select id="producto" name="producto" required>
+            <option value="">Selecciona una opción</option>
+            <option value="reloj-clasico" data-precio="120">Reloj clásico - 120€</option>
+            <option value="reloj-deportivo" data-precio="180">Reloj deportivo - 180€</option>
+            <option value="reloj-smart" data-precio="250">Reloj smart - 250€</option>
+          </select>
+          <small class="error-msg" id="error-producto"></small>
+        </div>
+
+        <!-- Plazo -->
+        <div class="form-row">
+          <label for="plazo">Plazo de entrega (días)</label>
+          <input id="plazo" name="plazo" type="number" min="1" max="60" value="30" />
+          <small class="help-text">
+            Menos de 15 días: <strong>+15%</strong> (urgente),
+            más de 30 días: <strong>-10%</strong> (descuento).
+          </small>
+        </div>
+
+        <!-- Extras -->
+        <div class="form-row form-row-column">
+          <span>Extras</span>
+          <label>
+            <input type="checkbox" class="extra" value="20" />
+            Correa personalizada (+20€)
+          </label>
+          <label>
+            <input type="checkbox" class="extra" value="35" />
+            Grabado personalizado (+35€)
+          </label>
+          <label>
+            <input type="checkbox" class="extra" value="15" />
+            Caja regalo premium (+15€)
+          </label>
+        </div>
+
+        <!-- Presupuesto resultante -->
+        <div class="form-row">
+          <label for="presupuesto">Presupuesto estimado</label>
+          <input id="presupuesto" type="text" readonly value="0 €" />
+        </div>
+      </fieldset>
+
+      <!-- CONDICIONES -->
+      <fieldset>
+        <legend>Condiciones y envío</legend>
+
+        <div class="form-row">
+          <label>
+            <input type="checkbox" id="condiciones" />
+            Acepto la política de privacidad
+          </label>
+          <small class="error-msg" id="error-condiciones"></small>
+        </div>
+
+        <div class="form-row buttons-row">
+          <button type="submit" class="btn-primary">Enviar formulario</button>
+          <button type="reset" class="btn-secondary">Resetear</button>
+        </div>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-left">
+      <p>&copy; 2025 TiempoPerfecto. Todos los derechos reservados.</p>
+      <a href="#">Política de Cookies</a> | 
+      <a href="#">Aviso legal</a>
+    </div>
+    <div class="footer-right">
+      <p>Síguenos</p>
+      <a href="#"><img src="../images/icon-facebook.jpg" alt="Facebook" width="24" height="22" /></a>
+      <a href="#"><img src="../images/icon-instagram.jpg" alt="Instagram" width="24" height="22" /></a>
+      <a href="#"><img src="../images/icon-twitter.jpg" alt="Twitter" width="24" height="22" /></a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
